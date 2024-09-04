@@ -11,7 +11,7 @@ const Navbar = () => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/hotel">Hotel</Link></li>
         <li><Link to="/guide">Guide</Link></li>
-        <li><Link to="/discover">Discover</Link></li>
+        <li><Link to="/connect">Discover</Link></li>
         <li><Link to="/itinerary">Itinerary</Link></li>
       </ul>
       <button className="login-btn">Login</button>
