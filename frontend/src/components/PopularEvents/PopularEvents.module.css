@@ -1,0 +1,41 @@
+.popularEvents {
+    padding: 40px 0;
+  }
+  
+  .sectionTitle {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .eventGrid {
+    display: flex;
+    overflow-x: auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .eventCard {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    min-width: 317px;
+  }
+  
+  .eventCard img {
+    height: 344px;
+    width: 317px;
+    object-fit: cover;
+  }
+  
+  .eventLabel {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    color: #5e3365;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bolder;
+  }
+  
+

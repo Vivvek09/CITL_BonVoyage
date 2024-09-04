@@ -1,0 +1,276 @@
+.home {
+  font-family: 'Poppins', 'Roboto' ,Arial, Helvetica, sans-serif;
+  max-width: 100vw; /* Constrain to screen width */
+  overflow-x: hidden;
+}
+
+h2 {
+  color: #5E3365;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #fef8e6;
+  max-width: 100vw; /* Constrain to screen width */
+}
+
+.navbar-logo {
+  font-size: 2em;
+  font-weight: 900;
+  color: #5E3365;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.navbar-links li {
+  cursor: pointer;
+  color: #5E3365;
+}
+
+.login-btn {
+  background-color: #5E3365;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.banner {
+  background-image: url('../assets/images/bg.png');
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0 20px;
+  max-width: 100vw; /* Constrain to screen width */
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 12px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.search-item input {
+  border: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  outline: none;
+}
+
+.explore-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #5E3365;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.things-to-do, .discover, .top-destinations, .community {
+  padding: 20px;
+  text-align: center;
+  max-width: 100vw; /* Constrain to screen width */
+}
+
+.things-to-do-cards, .destination-cards, .community-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  max-width: 100vw; /* Constrain to screen width */
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 400px;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px 0;
+}
+
+.card p {
+  color: #666;
+  padding: 0 15px 15px;
+}
+
+.card-dest {
+  width: 350px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.card-header h3 {
+  margin: 10px 0;
+  padding-left: 0;
+  text-align: left;
+}
+
+.card-header .price {
+  margin: 10px 0;
+  text-align: right;
+}
+
+.card-dest p {
+  color: #666;
+  padding: 0 15px 15px;
+  margin: 0em 0;
+  text-align: left;
+}
+
+.discover {
+  background-color: #D8BFD8;
+  padding: 40px;
+  padding-top: 10px;
+  max-width: 100vw; /* Constrain to screen width */
+}
+
+.discover h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.discover-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: #5E3365;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 100vw; /* Constrain to screen width */
+}
+
+.discover-button {
+  background-color: #FAFAD2;
+  color: #5E3365;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  margin: 10px 0;
+  margin-right: 5em;
+  align-self: center; /* Center the button horizontally */
+}
+
+.discover-text {
+  flex: 1;
+  padding: 30px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: flex-start; Align text to the start */
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.discover-text p {
+  margin: 3px 0;
+  font-size: 18px;
+}
+
+.leaflet-control-attribution {
+  display: none !important;
+}
+
+.map {
+  flex: 1.5;
+  max-width: 70%;
+}
+
+.map img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.travel-community {
+  padding: 20px;
+  text-align: center;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  max-width: 100vw; /* Constrain to screen width */
+}
+
+.community-cards-container {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  max-width: 100vw; /* Constrain to screen width */
+}
+
+.community-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  width: max-content;
+  max-width: 100vw; /* Constrain to screen width */
+}
+
+.community-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 350px;
+  flex-shrink: 0;
+}
+
+.community-card img {
+  width: 90%;
+  height: 200px;
+  margin-top: 15px;
+  /* object-fit: cover; */
+  border-radius: 10px;
+}
+
+.community-card h3 {
+  padding-left: 10px;
+  text-align: left;
+  margin: 0.7em 0;
+}
+
+.community-card p {
+  color: #666;
+  padding-left: 10px;
+  text-align: left;
+  margin: 0.5em 0;
+}

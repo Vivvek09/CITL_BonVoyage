@@ -1,0 +1,39 @@
+.eventActions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px 0;
+}
+
+.actionCard {
+  background-color: #5e3365;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.actionCard h3 {
+  margin-bottom: 15px;
+  color: #FAFAD2;
+  font-size: 20px;
+}
+
+.actionCard input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.actionBtn {
+  background-color: #FAFAD2;
+  color: #5e3365;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 600;
+}

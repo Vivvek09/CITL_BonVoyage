@@ -1,0 +1,42 @@
+h2 {
+  color: #5E3365;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #fef8e6;
+  max-width: 100vw; /* Constrain to screen width */
+}
+
+.navbar-logo {
+  font-size: 2em;
+  font-weight: 900;
+  color: #5E3365;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.navbar-links li {
+  cursor: pointer;
+  color: #5E3365;
+}
+.navbar-links a {
+  text-decoration: none;
+  color: inherit; /* Inherit color from parent */
+}
+
+.login-btn {
+  background-color: #5E3365;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}

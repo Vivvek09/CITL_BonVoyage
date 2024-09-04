@@ -1,0 +1,97 @@
+/* .hero {
+    text-align: center;
+    padding: 60px 0;
+    background-image: url('../../../public/hangout.png');
+    background-size: cover;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .searchBar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .searchBar input {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .searchBtn {
+    background-color: #5e3365;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+   */
+
+   .hero {
+    position: relative;
+    text-align: center;
+    padding: 60px 0;
+    background-image: url('/bonvoyage-frontend/public/hangout.png');
+    background-size: cover;
+    color: rgb(255, 255, 255);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255, 0.3); /* Adjust the alpha value (0.3) for desired transparency */
+    z-index: 1;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 2;
+}
+
+.title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.searchBar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.searchBar input {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+}
+
+.searchBtn {
+    background-color: #5e3365;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

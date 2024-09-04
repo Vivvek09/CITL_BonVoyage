@@ -1,0 +1,24 @@
+.topCategories {
+    padding: 40px 0;
+  }
+  
+  .categoryGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .categoryBtn {
+    background-color: #FAFAD2;
+    color: #5e3365;
+    font-weight: 600;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .categoryBtn:hover {
+    background-color: #e0e0e0;
+  }
