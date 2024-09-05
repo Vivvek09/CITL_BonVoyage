@@ -3,11 +3,23 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const cookieParser = require("cookie-parser");
 const User = require("./models/User");
 
 const app = express();
-app.use(cors());
 app.use(express.json());
+app.use(cookieParser());
+
+const accessTokenSecret = "jiqwuexhuqxmujiqxr8q38q2m8u9x9x34quxrt6ytf";
+const refreshTokenSecret = "jiqwuexhuqxmujiqxr8q38q2m8u9x9x34quxrt6ytt";
+let refreshTokens = [];
+
+// CORS configuration
+const corsOptions = {
+  origin: 'http://localhost:5173', // Replace with your frontend URL
+  credentials: true,
+};
+app.use(cors(corsOptions));
 
 mongoose.connect('mongodb+srv://venishakalola:KaD65RLvTAbm6IYh@cluster0.8uujn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
     .then(() => {
@@ -40,42 +52,53 @@ app.post("/api/login", async (req, res) => {
     if (!isMatch) {
       return res.status(400).json({ error: "Invalid credentials" });
     }
-    const token = jwt.sign(
-      { userId: user._id },
-      "jiqwuexhuqxmujiqxr8q38q2m8u9x9x34quxrt6ytf"
-    );
-    res.json({ token });
+
+    const accessToken = jwt.sign({ userId: user._id }, accessTokenSecret, { expiresIn: '1h' });
+    const refreshToken = jwt.sign({ userId: user._id }, refreshTokenSecret, { expiresIn: '7d' });
+    refreshTokens.push(refreshToken);
+
+    res.cookie('accessToken', accessToken, {
+      httpOnly: true,
+      secure: false, // Set to true in production (over HTTPS)
+      sameSite: 'Lax',
+      maxAge: 60 * 60 * 1000 // 1 hour
+    });
+
+    res.cookie('refreshToken', refreshToken, {
+      httpOnly: true,
+      secure: false, // Set to true in production (over HTTPS)
+      sameSite: 'Lax',
+      maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
+    });
+
+    res.json({ accessToken, refreshToken });
   } catch (error) {
     res.status(500).json({ error: "Error logging in" });
   }
 });
 
-async function viewUsers() {
-  try {
-    const users = await User.find({});
-    console.log(users);
-  } catch (error) {
-    console.error("Error fetching users:", error);
+app.post("/api/token", (req, res) => {
+  const { token } = req.body;
+  if (!token) {
+    return res.sendStatus(401);
   }
-}
-
-
-async function addUser(name, email, password) {
-    try {
-      const hashedPassword = await bcrypt.hash(password, 10);
-      const user = new User({ name, email, password: hashedPassword });
-      await user.save();
-      console.log("User added successfully");
-    } catch (error) {
-      console.error("Error adding user:", error);
+  if (!refreshTokens.includes(token)) {
+    return res.sendStatus(403);
+  }
+  jwt.verify(token, refreshTokenSecret, (err, user) => {
+    if (err) {
+      return res.sendStatus(403);
     }
-  }
-  
-  // Example usage of addUser function
-//   addUser("a", "a@b.com", "abc");
-  
+    const accessToken = jwt.sign({ userId: user.userId }, accessTokenSecret, { expiresIn: '1h' });
+    res.json({ accessToken });
+  });
+});
 
-viewUsers();
+app.post("/api/logout", (req, res) => {
+  const { token } = req.body;
+  refreshTokens = refreshTokens.filter(t => t !== token);
+  res.sendStatus(204);
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

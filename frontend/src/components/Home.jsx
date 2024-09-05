@@ -1,4 +1,3 @@
-
 import '../styles/Home.css';
 import { MapPin, Calendar, DollarSign, Search } from 'react-feather';
 import React, { useEffect, useState } from 'react';
@@ -7,6 +6,7 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import img from '../assets/images/bg.png';
 import Navbar from './Navbar.jsx';
+import { useNavigate } from 'react-router-dom';
 
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -15,10 +15,11 @@ L.Icon.Default.mergeOptions({
   shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
 });
 
-
 const Home = () => {
   const [location, setLocation] = useState([19.0760, 72.8777]);
   const [zoom, setZoom] = useState(11.5);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -33,6 +34,13 @@ const Home = () => {
       );
     } else {
       setLocation([19.0760, 72.8777]); // Fallback to Mumbai
+    }
+  }, []);
+
+  useEffect(() => {
+    const accessToken = localStorage.getItem('accessToken');
+    if (accessToken) {
+      setIsLoggedIn(true);
     }
   }, []);
 
@@ -116,64 +124,64 @@ const Home = () => {
       <section className="top-destinations">
         <h2>Top Destinations</h2>
         <div className="destination-cards">
-        <div className="card card-dest">
-  <img src={img} alt="Rome" />
-  <div className="card-header">
-    <h3>Rome, Italy</h3>
-    <p className="price">$5.42k</p>
-  </div>
-  <p>10 Days Trip</p>
-</div>
-<div className="card card-dest">
-  <img src={img} alt="London" />
-  <div className="card-header">
-    <h3>London, UK</h3>
-    <p className="price">$4.2k</p>
-  </div>
-  <p>12 Days Trip</p>
-</div>
-<div className="card card-dest">
-  <img src={img} alt="Europe" />
-  <div className="card-header">
-    <h3>Full Europe</h3>
-    <p className="price">$15k</p>
-  </div>
-  <p>28 Days Trip</p>
-</div>
+          <div className="card card-dest">
+            <img src={img} alt="Rome" />
+            <div className="card-header">
+              <h3>Rome, Italy</h3>
+              <p className="price">$5.42k</p>
+            </div>
+            <p>10 Days Trip</p>
+          </div>
+          <div className="card card-dest">
+            <img src={img} alt="London" />
+            <div className="card-header">
+              <h3>London, UK</h3>
+              <p className="price">$4.2k</p>
+            </div>
+            <p>12 Days Trip</p>
+          </div>
+          <div className="card card-dest">
+            <img src={img} alt="Europe" />
+            <div className="card-header">
+              <h3>Full Europe</h3>
+              <p className="price">$15k</p>
+            </div>
+            <p>28 Days Trip</p>
+          </div>
         </div>
       </section>
 
       <section className="travel-community">
-  <h2>Connect With Other Travelers In The Community</h2>
-  <div className="community-cards-container">
-    <div className="community-cards">
-      <div className="community-card">
-        <img src={img} alt="India" />
-        <h3>India</h3>
-        <p>Travel community</p>
-        <p>360+ followers</p>
-      </div>
-      <div className="community-card">
-        <img src={img} alt="Travel Talk" />
-        <h3>Travel Talk</h3>
-        <p>Travel community</p>
-        <p>360+ followers</p>
-      </div>
-      <div className="community-card">
-        <img src={img} alt="Beach" />
-        <h3>Beach</h3>
-        <p>Travel community</p>
-        <p>360+ followers</p>
-      </div>
-      <div className="community-card">
-        <img src={img} alt="Mountains" />
-        <h3>Mountains</h3>
-        <p>Travel community</p>
-        <p>360+ followers</p>
-      </div>
-    </div>
-  </div>
-</section>
+        <h2>Connect With Other Travelers In The Community</h2>
+        <div className="community-cards-container">
+          <div className="community-cards">
+            <div className="community-card">
+              <img src={img} alt="India" />
+              <h3>India</h3>
+              <p>Travel community</p>
+              <p>360+ followers</p>
+            </div>
+            <div className="community-card">
+              <img src={img} alt="Travel Talk" />
+              <h3>Travel Talk</h3>
+              <p>Travel community</p>
+              <p>360+ followers</p>
+            </div>
+            <div className="community-card">
+              <img src={img} alt="Beach" />
+              <h3>Beach</h3>
+              <p>Travel community</p>
+              <p>360+ followers</p>
+            </div>
+            <div className="community-card">
+              <img src={img} alt="Mountains" />
+              <h3>Mountains</h3>
+              <p>Travel community</p>
+              <p>360+ followers</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
