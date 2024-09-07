@@ -9,8 +9,10 @@ const EventDetailsPage = () => {
   const [ticketPrice, setTicketPrice] = useState('0.00');
 
   return (
+    <>
+    <Navbar />
     <div className="event-details-container">
-      <Navbar />
+      
       <main className="main-content">
         <div className="back-link">
           <ChevronLeft size={24} />
@@ -80,7 +82,7 @@ const EventDetailsPage = () => {
         </div>
       </main>
     </div>
-    
+    </>
   );
 };
 

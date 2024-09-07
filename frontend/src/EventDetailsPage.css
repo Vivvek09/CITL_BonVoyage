@@ -8,8 +8,8 @@
   .event-details-container {
     top: 0;
     margin: 0 ;
-    padding: 40px;
     background:linear-gradient(#FAFAD2, #D8BFD8);
+    padding: 40px;
   }
   
   .nav-bar {

@@ -1,6 +1,7 @@
 /* Outer container with gradient background */
 .outer-container {
   min-height: 100vh;
+  padding-bottom: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
