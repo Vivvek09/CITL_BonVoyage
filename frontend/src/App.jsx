@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import SingleEvent from './components/EventsForUser/SingleEvent';
+<<<<<<< Updated upstream
 import EventUser from './components/EventsForUser/eventuser.jsx';
 import LoginSignup from './Authentication/LoginSignup.jsx';
 import Connect from './components/Connect.jsx';
@@ -12,6 +13,11 @@ import EventDetailsPage from './EventDetailsPage.jsx';
 
 
 
+=======
+import LoginSignup from './Authentication/LoginSignup.jsx';
+import Connect from './components/Connect.jsx';
+import EventUser from './components/EventsForUser/eventuser.jsx';
+>>>>>>> Stashed changes
 
 function App() {
   return (
@@ -22,10 +28,13 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/" element={<Home />} />
         <Route path="/dashboard" element={<Home />} />
+<<<<<<< Updated upstream
 
         <Route path="/createeventform" element={<CreateEventForm />} /> 
         <Route path="/eventdetails" element={<EventDetailsPage />} /> 
         <Route path="/eventactions" element={<EventActions />} />
+=======
+>>>>>>> Stashed changes
         <Route path="/eventuser" element={<EventUser />} />
         <Route path="/single-event" element={<SingleEvent />} />
       </Routes>
@@ -33,9 +42,13 @@ function App() {
   );
 }
 
+<<<<<<< Updated upstream
 
 
 
 
 export default App;
 
+=======
+export default App;
+>>>>>>> Stashed changes

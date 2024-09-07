@@ -1,0 +1,264 @@
+/* .container {
+    background-color: #e9d8f2;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    margin:10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    gap: 10px;
+    width:80%;
+   
+  }
+  
+  .title {
+    color: #663399;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .content {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .imageSection {
+    flex: 1;
+  }
+  
+  .imageContainer {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+  }
+  
+  .eventName {
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    align-self: flex-start;
+  }
+  
+  .membersCount {
+    display: flex;
+    flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+  }
+  
+  .membersNumber {
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-weight: bold;
+  }
+  
+  .membersLabel {
+    color: white;
+    font-size: 14px;
+  }
+  
+  .detailsSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .dateTime, .location {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  h2 {
+    color: #663399;
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .dateTimeDetails, .locationDetails {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .icon {
+    font-size: 20px;
+  }
+  
+  .time {
+    margin-left: auto;
+  }
+  
+  .chatButton {
+    background-color: #663399;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-top: auto;
+  } */
+
+
+  .container {
+    background-color: #e9d8f2;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .title {
+    color: #663399;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .imageSection {
+    flex: 1;
+  }
+  
+  .imageContainer {
+    position: relative;
+    height:200px;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .image {
+height:fit-content;
+   
+    height: auto;
+    display: block;
+  }
+  
+  .imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+  }
+  
+  .eventName {
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+
+    align-self: flex-start;
+  }
+  
+  .membersCount {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+  
+  .membersNumber {
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+   font-size: 0.8rem;
+  }
+  
+  .membersLabel {
+    color: white;
+    font-size: 14px;
+  }
+  
+  .detailsSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .dateTime, .location {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+  }
+  
+  h2 {
+    color: #663399;
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .dateTimeDetails, .locationDetails {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .icon {
+    font-size: 20px;
+  }
+  
+  .time {
+    margin-left: auto;
+  }
+  
+  .chatButton {
+    background-color: #663399;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-top: auto;
+  }
