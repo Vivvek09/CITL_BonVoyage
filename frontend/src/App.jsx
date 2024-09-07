@@ -9,6 +9,10 @@ import CreateEventForm from './CreateEventForm.jsx';
 import EventActions from './components/EventActions/EventActions.jsx';
 import EventDetailsPage from './EventDetailsPage.jsx';
 
+
+
+
+
 function App() {
   return (
     <Router>
@@ -18,8 +22,10 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/" element={<Home />} />
         <Route path="/dashboard" element={<Home />} />
+
         <Route path="/createeventform" element={<CreateEventForm />} /> 
         <Route path="/eventdetails" element={<EventDetailsPage />} /> 
+        <Route path="/eventactions" element={<EventActions />} />
         <Route path="/eventuser" element={<EventUser />} />
         <Route path="/single-event" element={<SingleEvent />} />
       </Routes>
@@ -30,4 +36,6 @@ function App() {
 
 
 
+
 export default App;
+
