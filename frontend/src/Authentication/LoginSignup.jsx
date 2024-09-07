@@ -51,7 +51,8 @@ const LoginSignup = () => {
   };
 
   return (
-    <div
+    <div className="body-signup">
+      <div
       className={`login-signup-container ${
         isRightPanelActive ? "login-signup-right-panel-active" : ""
       }`}
@@ -133,6 +134,8 @@ const LoginSignup = () => {
         </div>
       </div>
     </div>
+    </div>
+    
   );
 };
 
