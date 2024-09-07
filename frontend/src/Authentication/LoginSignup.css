@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-
+.body-signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0;
+    background-color: #f0f0f0; 
+}
 .login-signup-container {
     background-color: #fff;
     border-radius: 10px;
@@ -10,6 +17,7 @@
     width: 768px;
     max-width: 100%;
     min-height: 480px;
+    
 }
 
 .login-signup-form-container {
@@ -17,12 +25,15 @@
     top: 0;
     height: 100%;
     transition: all 0.6s ease-in-out;
+    
+    
 }
 
 .login-signup-sign-in-container {
     left: 0;
     width: 50%;
     z-index: 2;
+    
 }
 
 .login-signup-container.login-signup-right-panel-active .login-signup-sign-in-container {
