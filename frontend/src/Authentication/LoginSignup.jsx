@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
+import { storeToken, isTokenExpired, handleTokenExpiration } from '../../auth'; // Adjust the import path as needed
 import "./LoginSignup.css";
 
 const LoginSignup = () => {
@@ -39,9 +40,11 @@ const LoginSignup = () => {
       const response = await axios.post("http://localhost:3000/api/login", {
         email,
         password,
-      });
-      console.log(response.data);
-      navigate("/dashboard");
+      }, { withCredentials: true });
+      const { accessToken, refreshToken } = response.data;
+      const expiresIn = 3600; // Assuming the access token expires in 1 hour (3600 seconds)
+      storeToken(accessToken, refreshToken, expiresIn);
+      navigate("/home");
     } catch (error) {
       console.error("Login error:", error.response.data);
     }
