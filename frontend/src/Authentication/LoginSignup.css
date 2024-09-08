@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
+.body-signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0;
+    background-color: #FFFFFF; 
+}
+
 .login-signup-container {
     background-color: #fff;
     border-radius: 10px;
@@ -10,6 +19,7 @@
     width: 768px;
     max-width: 100%;
     min-height: 480px;
+    
 }
 
 .login-signup-form-container {
@@ -71,7 +81,7 @@
 }
 
 .login-signup-overlay {
-    background-image: url('../assets/image.png');
+    background-image: url('../assets/images/auth.png');
     background-size: cover;  
     background-position: center;  
     background-repeat: no-repeat;

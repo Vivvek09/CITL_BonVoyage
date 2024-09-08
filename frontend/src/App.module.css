@@ -13,9 +13,6 @@ body, html {
 
 .app {
   font-family: Arial, sans-serif;
-  max-width: 1200px;
-  margin-top: 20%;
   padding: 0 20px;
   min-height: 100vh;
-  
 }

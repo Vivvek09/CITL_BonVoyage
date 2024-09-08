@@ -1,16 +1,19 @@
-import React from 'react';
 import styles from '../PopularEvents/PopularEvents.module.css';
+import concert from '../../assets/images/concert.png';
+import clubbing from  '../../assets/images/clubbing.png';
+import movie from  '../../assets/images/movie.png';
+import beach from '../../assets/images/beach.png';
 
 function PopularEvents() {
   const events = [
-    { name: 'CONCERT', image: '/bonvoyage-frontend/public/concert.png' },
-    { name: 'CLUBBING', image: '/bonvoyage-frontend/public/clubbing.png' },
-    { name: 'MOVIE', image: '/bonvoyage-frontend/public/movie.png' },
-    { name: 'BEACH', image: '/bonvoyage-frontend/public/beach.png' },
-    { name: 'CONCERT', image: '/bonvoyage-frontend/public/concert.png' },
-    { name: 'CLUBBING', image: '/bonvoyage-frontend/public/clubbing.png' },
-    { name: 'MOVIE', image: '/bonvoyage-frontend/public/movie.png' },
-    { name: 'BEACH', image: '/bonvoyage-frontend/public/beach.png' }
+    { name: 'CONCERT', image: concert },
+    { name: 'CLUBBING', image: clubbing },
+    { name: 'MOVIE', image: movie},
+    { name: 'BEACH', image: beach },
+    { name: 'CONCERT', image: concert },
+    { name: 'CLUBBING', image: clubbing },
+    { name: 'MOVIE', image: movie},
+    { name: 'BEACH', image: beach },
   ];
 
   return (

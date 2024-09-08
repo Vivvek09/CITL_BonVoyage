@@ -17,6 +17,14 @@ mongoose.connect('mongodb+srv://venishakalola:KaD65RLvTAbm6IYh@cluster0.8uujn.mo
         console.error('Error connecting to MongoDB:', error);
     });
 
+// mongoose.connect('mongodb://localhost/bonvoyage')
+// .then(() => {
+//     console.log('Connected to MongoDB');
+// })
+// .catch((error) => {
+//     console.error('Error connecting to MongoDB:', error);
+// });    
+
 app.post("/api/signup", async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -77,5 +85,19 @@ async function addUser(name, email, password) {
 
 viewUsers();
 
+const eventRoutes = require('../backend/models/EventRoutes');
+
+app.use(cors());
+app.use(express.json());
+
+// mongoose.connect('mongodb://localhost/bonvoyage', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
+
+app.use('/api/events', eventRoutes);
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+
+

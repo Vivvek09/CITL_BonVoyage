@@ -1,0 +1,190 @@
+/* General page styles */
+/* body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  } */
+  
+  .home-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* h1 {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 20px;
+  } */
+  
+  /* Search Bar Styles */
+  .search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-bar input {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-bar input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  /* Main content container */
+  .content-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /* Event List Section */
+  .event-list-section {
+    width: 60%; /* Takes 65% of the width, adjust as needed */
+    /* background-color: #FAFAD2 ; */
+  }
+  
+  .event-list-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  /* Event Card styles */
+  .event-card {
+    background-color: #FAFAD2 ;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .event-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .event-card h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #444;
+  }
+  
+  .event-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1;
+  }
+  
+  .event-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #5E3365;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .event-card a:hover {
+    background-color: #5E3365;
+  }
+  
+  /* Map Section */
+  .map-section {
+    width: 35%; /* Takes 35% of the width, adjust as needed */
+  }
+  
+  .map-section iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+  }
+  
+  /* Event Page Styles */
+.event-page {
+    display: flex;
+    gap: 20px; /* Space between the image and the details */
+    align-items: flex-start; /* Align the top of the image and details */
+    margin-top: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for elevation */
+  }
+  
+  /* Image Section */
+  .event-page img {
+    width: 40%; /* Image takes 40% of the container width */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for image */
+  }
+  
+  /* Details Section */
+  .event-page .event-details {
+    width: 60%; /* Details take 60% of the container width */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .event-page h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .event-page p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .event-page p strong {
+    color: #333; /* Highlighting strong elements (like Date, Location) */
+    font-weight: bold;
+  }
+  
+  /* Media Query for smaller screens */
+  @media (max-width: 768px) {
+    .event-page {
+      flex-direction: column;
+    }
+  
+    .event-page img {
+      width: 100%; /* Full width image on smaller screens */
+      margin-bottom: 20px; /* Add space below the image */
+    }
+  
+    .event-page .event-details {
+      width: 100%; /* Full width for details */
+    }
+  }
+  
+  
