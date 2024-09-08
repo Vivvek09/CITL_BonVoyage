@@ -43,7 +43,7 @@
     position: relative;
     text-align: center;
     padding: 60px 0;
-    background-image: url('/bonvoyage-frontend/public/hangout.png');
+    background-image: url('../../assets/images/hero.png');
     background-size: cover;
     color: rgb(255, 255, 255);
 }
