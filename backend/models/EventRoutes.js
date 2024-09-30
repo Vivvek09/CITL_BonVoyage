@@ -75,15 +75,18 @@ router.post('/', async (req, res) => {
   const event = new Event({
     title: req.body.title,
     description: req.body.description,
-    date: req.body.date,
+    //date: req.body.date,
     location: req.body.location,
-    attendees: req.body.attendees,
-    image: req.body.image,
+    //attendees: req.body.attendees,
+    //image: req.body.image,
     startTime: req.body.startTime,
     endTime: req.body.endTime,
     ticketType: req.body.ticketType,
-    ticketName: req.body.ticketName,
-    ticketPrice: req.body.ticketPrice,
+    // ticketName: req.body.ticketName,
+    // ticketPrice: req.body.ticketPrice,
+    category: req.body.category,
+    eventType: req.body.eventType,
+    session: req.body.session,
   });
 
   try {
@@ -94,6 +97,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+
 // Update one event
 router.patch('/:id', getEvent, async (req, res) => {
   if (req.body.title != null) {
@@ -102,18 +106,18 @@ router.patch('/:id', getEvent, async (req, res) => {
   if (req.body.description != null) {
     res.event.description = req.body.description;
   }
-  if (req.body.date != null) {
-    res.event.date = req.body.date;
-  }
+  // if (req.body.date != null) {
+  //   res.event.date = req.body.date;
+  // }
   if (req.body.location != null) {
     res.event.location = req.body.location;
   }
-  if (req.body.attendees != null) {
-    res.event.attendees = req.body.attendees;
-  }
-  if (req.body.image != null) {
-    res.event.image = req.body.image;
-  }
+  // if (req.body.attendees != null) {
+  //   res.event.attendees = req.body.attendees;
+  // }
+  // if (req.body.image != null) {
+  //   res.event.image = req.body.image;
+  // }
   if (req.body.startTime != null) {
     res.event.startTime = req.body.startTime;
   }
@@ -123,12 +127,12 @@ router.patch('/:id', getEvent, async (req, res) => {
   if (req.body.ticketType != null) {
     res.event.ticketType = req.body.ticketType;
   }
-  if (req.body.ticketName != null) {
-    res.event.ticketName = req.body.ticketName;
-  }
-  if (req.body.ticketPrice != null) {
-    res.event.ticketPrice = req.body.ticketPrice;
-  }
+  // if (req.body.ticketName != null) {
+  //   res.event.ticketName = req.body.ticketName;
+  // }
+  // if (req.body.ticketPrice != null) {
+  //   res.event.ticketPrice = req.body.ticketPrice;
+  // }
 
   try {
     const updatedEvent = await res.event.save();
