@@ -1,18 +1,19 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { LuCalendar, LuMapPin, LuMessageCircle } from "react-icons/lu"; // Import icons from react-icons/luc
 import styles from "./EventCard.module.css";
 
-const EventCard = ({ title, date, time, location, membersCount, eventImage, dateIcon, locationIcon, chatIcon }) => {
-    const navigate = useNavigate();
+const EventCard = ({ title, date, time, location, membersCount, eventImage }) => {
+  const navigate = useNavigate();
 
-    const handleClick = () => {
-      navigate("/single-event", {
-        state: { event: { title, date, time, location, membersCount, eventImage, dateIcon, locationIcon, chatIcon } }
-      });
-    };
+  const handleClick = () => {
+    navigate("/single-event", {
+      state: { event: { title, date, time, location, membersCount, eventImage } }
+    });
+  };
+
   return (
     <div className={styles.container} onClick={handleClick}>
-    
       <div className={styles.content}>
         <div className={styles.imageSection}>
           <div className={styles.imageContainer}>
@@ -34,7 +35,7 @@ const EventCard = ({ title, date, time, location, membersCount, eventImage, date
           <div className={styles.dateTime}>
             <h2>Date and Time</h2>
             <div className={styles.dateTimeDetails}>
-              <img src={dateIcon} alt="Date icon" className={styles.icon} />
+              <LuCalendar className={styles.icon} /> {/* Use LuCalendar icon */}
               <span>{date}</span>
               <span className={styles.time}>{time}</span>
             </div>
@@ -42,12 +43,12 @@ const EventCard = ({ title, date, time, location, membersCount, eventImage, date
           <div className={styles.location}>
             <h2>Location</h2>
             <div className={styles.locationDetails}>
-              <img src={locationIcon} alt="Location icon" className={styles.icon} />
+              <LuMapPin className={styles.icon} /> {/* Use LuMapPin icon */}
               <span>{location}</span>
             </div>
           </div>
           <button className={styles.chatButton}>
-            <img src={chatIcon} alt="Chat icon" className={styles.icon} />
+            <LuMessageCircle className={styles.icon} /> {/* Use LuMessageCircle icon */}
             Chat with Members
           </button>
         </div>

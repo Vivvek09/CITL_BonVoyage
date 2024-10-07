@@ -1,28 +1,23 @@
-// // import React from 'react';
-// import EventList from '../EventLists/EventList';
-// import '../EventLists/event.css'
-
-// function HomePage() {
-//   return (
-//     <div className="home-page">
-//       <h1>Discover Events in Mumbai</h1>
-//       <EventList />
-//     </div>
-//   );
-// }
-
-// export default HomePage;
-
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import EventList from '../EventLists/EventList';
 import '../EventLists/event.css';
 import Navbar from '../components/Navbar';
 
 function HomePage() {
   const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
+  };
+
+  const handleSeeOtherEvents = () => {
+    // Logic for "See other events" button click
+    window.open("https://serpapi.com/search.html?engine=google_events&q=Events+in+Mumbai&gl=in&hl=en&api_key=4dccf256904e0d93c91d9d9183e68107c139b0e03c47315f1e1adeab57de9e6d", "_blank");
+    
+   // navigate('/google-events'); // Redirect to GoogleEvents page
+    console.log("See other events button clicked");
   };
 
   return (
@@ -36,6 +31,11 @@ function HomePage() {
           value={searchTerm}
           onChange={handleSearchChange}
         />
+      </div>
+
+      {/* "See other events" button */}
+      <div className="see-other-events">
+        <button onClick={handleSeeOtherEvents}>See other events</button>
       </div>
 
       {/* Main content: Event list and map side-by-side */}
