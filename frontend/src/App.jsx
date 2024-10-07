@@ -10,7 +10,7 @@ import EventPage from './EventLists/Eventpage.jsx';
 import CreateEventForm from './CreateEventForm.jsx';
 import EventActions from './components/EventActions/EventActions.jsx';
 import EventDetailsPage from './EventDetailsPage.jsx';
-
+import GoogleEvents from './GoogleEvents.jsx';
 
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
         <Route path="/dashboard" element={<Home />} />
         <Route path="/nearbyEvents" element={<HomePage/>} />
         <Route path="/event/:id" element={<EventPage/>} />
-
+        <Route path="/google-events" element={<GoogleEvents />} /> 
         <Route path="/createeventform" element={<CreateEventForm />} /> 
         <Route path="/eventdetails" element={<EventDetailsPage />} /> 
         <Route path="/eventactions" element={<EventActions />} />
