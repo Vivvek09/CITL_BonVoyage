@@ -1,40 +1,12 @@
-// import  { useState, useEffect } from 'react';
-// import axios from 'axios';
-// import { useParams } from 'react-router-dom';
-// import '../EventLists/event.css'
 
-// function EventPage() {
-//   const [event, setEvent] = useState(null);
-//   const { id } = useParams();
 
-//   useEffect(() => {
-//     const fetchEvent = async () => {
-//       const res = await axios.get(`http://localhost:3000/api/events/${id}`);
-//       setEvent(res.data);
-//     };
-//     fetchEvent();
-//   }, [id]);
-
-//   if (!event) return <div>Loading...</div>;
-
-//   return (
-//     <div className="event-page">
-//       <h1>{event.title}</h1>
-//       <img src={event.image} alt={event.title} />
-//       <p>{event.description}</p>
-//       <p>Date: {new Date(event.date).toLocaleString()}</p>
-//       <p>Location: {event.location}</p>
-//       <p>Attendees: {event.attendees}</p>
-//     </div>
-//   );
-// }
-
-// export default EventPage;
 
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import '../EventLists/event.css';
+import '../EventLists/EventDetails.css';
+import Navbar from '../components/Navbar';
+import { format, isValid } from 'date-fns';
 
 function EventPage() {
   const [event, setEvent] = useState(null);
@@ -42,27 +14,45 @@ function EventPage() {
 
   useEffect(() => {
     const fetchEvent = async () => {
-      const res = await axios.get(`http://localhost:3000/api/events/${id}`);
-      setEvent(res.data);
+      try {
+        const res = await axios.get(`http://localhost:3000/api/events/${id}`);
+        setEvent(res.data);
+      } catch (error) {
+        console.error("Error fetching event data:", error);
+      }
     };
     fetchEvent();
   }, [id]);
 
   if (!event) return <div>Loading...</div>;
 
-  return (
-    <div className="event-page">
-      <div className="event-content">
-        {/* Image Section */}
-        <img src={event.image} alt={event.title} />
+  const eventDate = new Date(event.startTime);
+  const formattedDate = isValid(eventDate) ? format(eventDate, 'EEEE, d MMMM yyyy') : 'Invalid Date';
+  const formattedTime = isValid(eventDate) ? format(eventDate, 'h:mm a') : 'Invalid Time';
 
-        {/* Event Details Section */}
-        <div className="event-details">
-          <h1>{event.title}</h1>
+  return (
+    <div className="event-details-wrapper">
+      <Navbar />
+      <div className="event-content">
+        <img src={event.image} alt={event.title} className="event-image" />
+        <h1 className="event-title">{event.title}</h1>
+        <div className="event-info">
+          <div className="info-column">
+            <h2>Date and Time</h2>
+            <p><span className="icon">📅</span> {formattedDate}</p>
+            <p><span className="icon">🕒</span> {formattedTime}</p>
+            <a href="#" className="add-to-calendar">+ Add to Calendar</a>
+            <h2>Location</h2>
+            <p><span className="icon">📍</span> {event.location}</p>
+          </div>
+          <div className="info-column">
+            <button className="join-group-button">Join Group</button>
+            <p className="price">Price: {event.ticketPrice ? `Rs ${event.ticketPrice}` : 'Free'}</p>
+          </div>
+        </div>
+        <div className="event-description">
+          <h2>Event Description</h2>
           <p>{event.description}</p>
-          <p><span>Date:</span> {new Date(event.date).toLocaleString()}</p>
-          <p><span>Location:</span> {event.location}</p>
-          <p><span>Attendees:</span> {event.attendees}</p>
         </div>
       </div>
     </div>
