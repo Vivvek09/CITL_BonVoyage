@@ -1,0 +1,165 @@
+/* .event-details-wrapper {
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .event-details-wrapper .event-content {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .event-details-wrapper .event-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .event-details-wrapper .event-title {
+    font-size: 24px;
+    color: #5E3365;
+    padding: 20px;
+    margin: 0;
+  }
+  
+  .event-details-wrapper .event-info {
+    display: flex;
+    padding: 0 20px 20px;
+  }
+  
+  .event-details-wrapper .info-column {
+    flex: 1;
+  }
+  
+  .event-details-wrapper .info-column:first-child {
+    margin-right: 20px;
+  }
+  
+  .event-details-wrapper h2 {
+    font-size: 18px;
+    color: #5E3365;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .event-details-wrapper p {
+    margin: 0 0 10px;
+    line-height: 1.5;
+  }
+  
+  .event-details-wrapper .icon {
+    margin-right: 5px;
+  }
+  
+  .event-details-wrapper .add-to-calendar {
+    color: #5E3365;
+    text-decoration: none;
+  }
+  
+  .event-details-wrapper .join-group-button {
+    background-color: #5E3365;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .event-details-wrapper .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #5E3365;
+  } */
+
+  .event-details-wrapper {
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .event-details-wrapper .event-content {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .event-details-wrapper .event-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .event-details-wrapper .event-title {
+    font-size: 24px;
+    color: #5E3365;
+    padding: 20px;
+    margin: 0;
+  }
+  
+  .event-details-wrapper .event-info {
+    display: flex;
+    padding: 0 20px 20px;
+  }
+  
+  .event-details-wrapper .info-column {
+    flex: 1;
+  }
+  
+  .event-details-wrapper .info-column:first-child {
+    margin-right: 20px;
+  }
+  
+  .event-details-wrapper h2 {
+    font-size: 18px;
+    color: #5E3365;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .event-details-wrapper p {
+    margin: 0 0 10px;
+    line-height: 1.5;
+  }
+  
+  .event-details-wrapper .icon {
+    margin-right: 5px;
+  }
+  
+  .event-details-wrapper .add-to-calendar {
+    color: #5E3365;
+    text-decoration: none;
+  }
+  
+  .event-details-wrapper .join-group-button {
+    background-color: #5E3365;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .event-details-wrapper .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #5E3365;
+  }
+  
+  .event-details-wrapper .event-description {
+    padding: 0 20px 20px;
+  }
+  
+  .event-details-wrapper .event-description h2 {
+    margin-top: 0;
+  }

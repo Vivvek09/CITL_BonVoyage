@@ -1,190 +1,132 @@
-/* General page styles */
-/* body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-  } */
-  
-  .home-page {
-    max-width: 1200px;
+.home-page {
+    max-width: 100vw;
     margin: 0 auto;
     padding: 20px;
-    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
   
-  /* h1 {
-    color: #333;
-    font-size: 36px;
-    margin-bottom: 20px;
-  } */
-  
-  /* Search Bar Styles */
-  .search-bar {
-    margin-bottom: 20px;
+  .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .nav-links a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .login-button {
+    background-color: #5E3365;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    padding: 0%;
+  }
+  
+  .left-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding-right: 20px;
+  }
+  
+  .search-bar {
+    display: flex;
+    margin-bottom: 20px;
+    width: 100vw;
   }
   
   .search-bar input {
-    width: 50%;
+    flex-grow: 1;
     padding: 10px;
-    font-size: 16px;
     border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .search-button {
+    background-color: #5E3365;
+    border: none;
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  .see-other-events {
+    margin-bottom: 20px;
+  }
+  
+  .see-other-events button {
+    background-color: #5E3365;
+    color: white;
+    border: none;
+    padding: 10px 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
   }
   
-  .search-bar input:focus {
-    outline: none;
-    border-color: #007bff;
-  }
-  
-  /* Main content container */
-  .content-container {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  
-  /* Event List Section */
   .event-list-section {
-    width: 60%; /* Takes 65% of the width, adjust as needed */
-    /* background-color: #FAFAD2 ; */
+    flex: 1;
+    overflow-y: auto;
   }
   
-  .event-list-section h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    color: #333;
-    font-weight: 600;
-  }
-  
-  /* Event Card styles */
   .event-card {
-    background-color: #FAFAD2 ;
+    display: flex;
+    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     margin-bottom: 20px;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease-in-out;
-  }
-  
-  .event-card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
   }
   
   .event-card img {
-    width: 100%;
-    height: 200px;
+    width: 300px;
+    height: 150px;
     object-fit: cover;
-    border-radius: 8px;
   }
   
-  .event-card h3 {
-    font-size: 24px;
-    margin-top: 10px;
-    color: #444;
+  .event-info {
+    flex-grow: 1;
+    padding: 10px;
   }
   
-  .event-card p {
-    font-size: 16px;
+  .event-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+  }
+  
+  .event-info p {
+    margin: 0 0 5px 0;
+    font-size: 14px;
     color: #666;
-    line-height: 1;
   }
   
-  .event-card a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #5E3365;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-  }
-  
-  .event-card a:hover {
-    background-color: #5E3365;
-  }
-  
-  /* Map Section */
-  .map-section {
-    width: 35%; /* Takes 35% of the width, adjust as needed */
-  }
-  
-  .map-section iframe {
-    width: 100%;
-    height: 450px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  .save-button {
+    background: none;
     border: none;
+    padding: 10px;
+    cursor: pointer;
   }
   
-  /* Event Page Styles */
-.event-page {
-    display: flex;
-    gap: 20px; /* Space between the image and the details */
-    align-items: flex-start; /* Align the top of the image and details */
-    margin-top: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for elevation */
+  .map-section {
+    flex: 1;
+    position: sticky;
+    top: 0;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
   }
   
-  /* Image Section */
-  .event-page img {
-    width: 40%; /* Image takes 40% of the container width */
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for image */
+  .map-section h2 {
+    margin-top: 0;
   }
-  
-  /* Details Section */
-  .event-page .event-details {
-    width: 60%; /* Details take 60% of the container width */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .event-page h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .event-page p {
-    font-size: 16px;
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 10px;
-  }
-  
-  .event-page p strong {
-    color: #333; /* Highlighting strong elements (like Date, Location) */
-    font-weight: bold;
-  }
-  
-  /* Media Query for smaller screens */
-  @media (max-width: 768px) {
-    .event-page {
-      flex-direction: column;
-    }
-  
-    .event-page img {
-      width: 100%; /* Full width image on smaller screens */
-      margin-bottom: 20px; /* Add space below the image */
-    }
-  
-    .event-page .event-details {
-      width: 100%; /* Full width for details */
-    }
-  }
-  
-  
