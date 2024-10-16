@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venisha Kalola - Software Developer Profile</title>
+    <style>
+         :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #2c3e50;
+            --accent-color: #161010;
+            --text-color: #333333;
+            --bg-color: #f5f7fa;
+            --card-bg: #ffffff;
+            --gradient: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+            --skill-bg: #5ca0e2;
+            --tech-bg: #4a90e2;
+        }
+        [data-theme="dark"] {
+            --primary-color: #61dafb;
+            --secondary-color: #f0f0f0;
+            --accent-color: #0e0d0d;
+            --text-color: #e0e0e0;
+            --bg-color: #282c34;
+            --card-bg: #20232a;
+            --gradient: linear-gradient(120deg, #3a3d4a 0%, #282c34 100%);
+            --skill-bg: #4a90e2;
+            --tech-bg: #61dafb;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: var(--gradient);
+            color: var(--text-color);
+            min-height: 100vh;
+            transition: all 0.3s ease;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0px;
+        }
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .profile-section {
+            display: flex;
+            margin-top: 40px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .profile-image {
+            flex: 1;
+            max-width: 50%;
+            object-fit: cover;
+        }
+        .profile-content {
+            flex: 1;
+            padding: 40px;
+        }
+        h1, h2 {
+            color: var(--secondary-color);
+        }
+        .skills-tech {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .skills, .technologies {
+            flex: 1;
+        }
+        .skill-list, .tech-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .skill-list li, .tech-list li {
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: white;
+        }
+        .skill-list li {
+            background: var(--skill-bg);
+        }
+        .tech-list li {
+            background: var(--tech-bg);
+        }
+        .projects {
+            margin-top: 40px;
+        }
+        .project {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .project h3 {
+            color: var(--primary-color);
+        }
+        .project-content {
+            display: flex;
+            align-items: center;
+        }
+        .project img {
+            width: 300px;
+            height: 200px;
+            object-fit:cover;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+        #themeToggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #themeToggle:hover {
+            opacity: 0.9;
+        }
+        footer {
+        background: var(--primary-color);
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        
+        width: 100%;
+        bottom: 0;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    }
+
+    footer a {
+        color: var(--secondary-color);
+        text-decoration: none;
+        margin: 0 5px;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Keerti Mehta</h1>
+            <p>Software Developer</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="profile-section">
+            <img src="./img1.png" alt="Keerti Mehta" class="profile-image">
+            <div class="profile-content">
+                <h2>About Me</h2>
+                <p>As a passionate software developer, I thrive on creating efficient and innovative solutions to complex problems. With a strong foundation in various programming languages and frameworks, I'm always eager to learn and adapt to new technologies.</p>
+                
+                <div class="skills-tech">
+                    <div class="skills">
+                        <h2>Skills</h2>
+                        <ul class="skill-list">
+                            <li>Full-stack Development</li>
+                            <li>Problem Solving</li>
+                            <li>Agile Methodologies</li>
+                            <li>Database Design</li>
+                            <li>Version Control (Git)</li>
+                            <li>API Development</li>
+                            <li>Test-Driven Development</li>
+                        </ul>
+                    </div>
+                    <div class="technologies">
+                        <h2>Technologies</h2>
+                        <ul class="tech-list">
+                            <li>JavaScript</li>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>SQL</li>
+                            <li>MongoDB</li>
+                            <li>Docker</li>
+                            <li>AWS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <div class="project-content">
+                    <img src="./img2.png" alt="E-commerce Platform">
+                    <div>
+                        <h3>E-commerce Platform</h3>
+                        <p>Developed a full-stack e-commerce platform using React for the frontend and Node.js for the backend. Implemented features such as user authentication, product catalog, shopping cart, and payment integration.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-content">
+                    <img src="./img3.png" alt="Task Management App">
+                    <div>
+                        <h3>Task Management App</h3>
+                        <p>Created a responsive task management application using Vue.js and Firebase. Features include real-time updates, task assignment, priority setting, and deadline tracking.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-content">
+                    <img src="./img4.png" alt="Machine Learning Model">
+                    <div>
+                        <h3>Machine Learning Model for Predictive Analysis</h3>
+                        <p>Developed a machine learning model using Python and scikit-learn to predict customer churn for a telecom company. Achieved 85% accuracy in identifying at-risk customers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <button id="themeToggle">Toggle Theme</button>
+
+    <script>
+       const themes = [
+    {
+        primary: '#61dafb', // Light Cyan
+        secondary: '#f0f0f0', // Light Gray
+        accent: '#ff6b6b', // Bright Red
+        text: '#e0e0e0', // Soft White
+        bg: '#282c34', // Dark Slate Gray
+        cardBg: '#20232a', // Dark Gray-Blue
+        gradient: 'linear-gradient(120deg, #3a3d4a 0%, #282c34 100%)', // Smooth dark gradient
+        skillBg: '#4a90e2', // Bright Blue for skill bars
+        techBg: '#61dafb' // Light Cyan for technology background
+    },
+    {
+        primary: '#4a90e2', // Bright Blue
+        secondary: '#2c3e50', // Dark Slate Gray
+        accent: '#161010', // Dark Red
+        text: '#333333', // Dark Gray
+        bg: '#f5f7fa', // Light Gray
+        cardBg: '#ffffff', // White
+        gradient: 'linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)', // Smooth light gradient
+        skillBg: '#5ca0e2', // Bright Blue for skill bars
+        techBg: '#4a90e2' // Bright Blue for technology background
+    }
+    
+];
+
+        let currentThemeIndex = 0;
+
+        function setTheme(theme) {
+            Object.keys(theme).forEach(key => {
+                document.documentElement.style.setProperty(`--${key.replace(/([A-Z])/g, "-$1").toLowerCase()}`, theme[key]);
+            });
+            document.documentElement.setAttribute('data-theme', currentThemeIndex < 3 ? 'light' : 'dark');
+        }
+
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+            setTheme(themes[currentThemeIndex]);
+        });
+    </script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Keerti Mehta. All rights reserved.</p>
+            <p>Follow me on 
+                <a href="https://github.com/venishakalola" target="_blank">GitHub</a>, 
+                <a href="https://linkedin.com/in/venishakalola" target="_blank">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
