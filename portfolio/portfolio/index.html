@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Development Team</title>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #2c3e50;
+            --accent-color: #161010;
+            --text-color: #333333;
+            --bg-color: #f5f7fa;
+            --card-bg: #ffffff;
+            --gradient: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+            --skill-bg: #5ca0e2;
+            --tech-bg: #4a90e2;
+        }
+        [data-theme="dark"] {
+            --primary-color: #61dafb;
+            --secondary-color: #f0f0f0;
+            --accent-color: #0e0d0d;
+            --text-color: #e0e0e0;
+            --bg-color: #282c34;
+            --card-bg: #20232a;
+            --gradient: linear-gradient(120deg, #3a3d4a 0%, #282c34 100%);
+            --skill-bg: #4a90e2;
+            --tech-bg: #61dafb;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: var(--gradient);
+            color: var(--text-color);
+            min-height: 100vh;
+            transition: all 0.3s ease;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .team-member {
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+        .team-member img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .team-member-info {
+            padding: 20px;
+        }
+        .team-member h3 {
+            margin: 0;
+            color: var(--primary-color);
+        }
+        .team-member p {
+            margin: 10px 0 0;
+        }
+        #profileModal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: var(--card-bg);
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 800px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .close {
+            color: var(--text-color);
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: var(--accent-color);
+        }
+        .profile-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .profile-image {
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
+        }
+        .profile-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .profile-details {
+            flex: 2;
+            min-width: 300px;
+        }
+        .skills-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .skills, .technologies {
+            flex: 1;
+            min-width: 200px;
+        }
+        .skill-list, .tech-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill-list li, .tech-list li {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: white;
+        }
+        .skill-list li {
+            background: var(--skill-bg);
+        }
+        .tech-list li {
+            background: var(--tech-bg);
+        }
+        .projects {
+            margin-top: 40px;
+        }
+        .project {
+            background: var(--bg-color);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .project h3 {
+            color: var(--primary-color);
+        }
+        #themeToggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #themeToggle:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Our Software Development Team</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="team-grid" id="teamGrid">
+            <!-- Team members will be dynamically added here -->
+        </div>
+    </div>
+
+    <div id="profileModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="profileContent"></div>
+        </div>
+    </div>
+
+    <button id="themeToggle">Toggle Theme</button>
+
+    <script>
+        const teamMembers = [
+            {
+                name: "Venisha Kalola",
+                role: "Software Developer",
+                image: "./img1.png",
+                bio: "Venisha is a passionate full stack developer with expertise in React and Node.js. She loves creating efficient and scalable web applications.",
+                skills: ["Full-stack Development", "Problem Solving", "Agile Methodologies", "Database Design", "Version Control (Git)", "API Development", "Test-Driven Development"],
+                technologies: ["JavaScript", "Python", "Java", "React", "Node.js", "SQL", "MongoDB", "Docker", "AWS"],
+                page: "./venisha.html"
+               
+            },
+            {
+                name: "Rashi Lodha",
+                role: "Software Developer",
+                image: "./img2.png",
+                bio: "Alex is a creative frontend developer who excels in creating intuitive and responsive user interfaces. He has a keen eye for design and user experience.",
+                skills: ["UI/UX Design", "Responsive Web Design", "Frontend Optimization", "CSS Animation", "Cross-browser Compatibility", "Accessibility"],
+                technologies: ["HTML5", "CSS3", "JavaScript", "React", "Vue.js", "Sass", "Webpack", "Jest"],
+                 page: "./rashi.html"
+            },
+            {
+                name: "Keerti Mehta",
+                role: "Software Developer",
+                image: "./img3.png",
+                bio: "Samantha specializes in building robust and scalable backend systems. She has extensive experience in cloud technologies and microservices architecture.",
+                skills: ["System Architecture", "Database Optimization", "API Design", "Microservices", "Cloud Computing", "Security Best Practices"],
+                technologies: ["Java", "Spring Boot", "Python", "Django", "PostgreSQL", "Redis", "Kubernetes", "AWS"],
+                 page: "./keerti.html"
+            },
+            {
+                name: "Atharva Jogi",
+                role: "Software Developer",
+                image: "./img4.png",
+                bio: "Marcus is an expert in DevOps practices and tools. He focuses on improving development workflows and ensuring smooth deployment and operation of software systems.",
+                skills: ["Continuous Integration/Deployment", "Infrastructure as Code", "Containerization", "Monitoring and Logging", "Performance Tuning", "Automation"],
+                technologies: ["Docker", "Kubernetes", "Jenkins", "Terraform", "Ansible", "Prometheus", "ELK Stack", "Google Cloud Platform"],
+                page: "./atharva.html"
+            }
+        ];
+
+        const themes = [
+        {
+        primary: '#61dafb', // Light Cyan
+        secondary: '#f0f0f0', // Light Gray
+        accent: '#ff6b6b', // Bright Red
+        text: '#e0e0e0', // Soft White
+        bg: '#282c34', // Dark Slate Gray
+        cardBg: '#20232a', // Dark Gray-Blue
+        gradient: 'linear-gradient(120deg, #3a3d4a 0%, #282c34 100%)', // Smooth dark gradient
+        skillBg: '#4a90e2', // Bright Blue for skill bars
+        techBg: '#61dafb' // Light Cyan for technology background
+    },
+    {
+        primary: '#4a90e2', // Bright Blue
+        secondary: '#2c3e50', // Dark Slate Gray
+        accent: '#161010', // Dark Red
+        text: '#333333', // Dark Gray
+        bg: '#f5f7fa', // Light Gray
+        cardBg: '#ffffff', // White
+        gradient: 'linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)', // Smooth light gradient
+        skillBg: '#5ca0e2', // Bright Blue for skill bars
+        techBg: '#4a90e2' // Bright Blue for technology background
+    }
+        ];
+
+        let currentThemeIndex = 0;
+
+        function setTheme(theme) {
+            Object.keys(theme).forEach(key => {
+                document.documentElement.style.setProperty(`--${key.replace(/([A-Z])/g, "-$1").toLowerCase()}`, theme[key]);
+            });
+            document.documentElement.setAttribute('data-theme', currentThemeIndex < 3 ? 'light' : 'dark');
+        }
+
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+            setTheme(themes[currentThemeIndex]);
+        });
+
+        function createTeamMemberCards() {
+            const teamGrid = document.getElementById('teamGrid');
+            teamMembers.forEach(member => {
+                const memberCard = document.createElement('div');
+                memberCard.className = 'team-member';
+                memberCard.innerHTML = `
+                    <img src="${member.image}" alt="${member.name}">
+                    <div class="team-member-info">
+                        <h3>${member.name}</h3>
+                        <p>${member.role}</p>
+                    </div>
+                `;
+                memberCard.addEventListener('click', () => {
+                    window.location.href = member.page;
+                });
+                teamGrid.appendChild(memberCard);
+            });
+        }
+
+        // Initialize the team member cards
+        createTeamMemberCards();
+    </script>
+</body>
+</html>
