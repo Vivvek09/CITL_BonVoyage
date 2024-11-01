@@ -13,12 +13,15 @@ app.use(cookieParser());
 const accessTokenSecret = "jiqwuexhuqxmujiqxr8q38q2m8u9x9x34quxrt6ytf";
 const refreshTokenSecret = "jiqwuexhuqxmujiqxr8q38q2m8u9x9x34quxrt6ytt";
 let refreshTokens = [];
+const allowedOrigins = ['http://localhost:5173']; // Add your frontend URL
 
 // CORS configuration
 const corsOptions = {
-  origin: 'http://localhost:5173', // Replace with your frontend URL
-  credentials: true,
+    origin: allowedOrigins,
+    credentials: true, // Allow credentials (like cookies)
 };
+
+// Apply CORS middleware
 app.use(cors(corsOptions));
 
 mongoose.connect('mongodb+srv://venishakalola:KaD65RLvTAbm6IYh@cluster0.8uujn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')

@@ -1,0 +1,371 @@
+{
+  "timestamp": "2024-11-01T07:04:36.881Z",
+  "totalCards": 52,
+  "validEntries": 52,
+  "data": [
+    {
+      "name": "1. Gateway of India",
+      "location": "Fort Mumbai",
+      "rating": "4.9",
+      "type": "Top Attraction",
+      "cost": "₹750"
+    },
+    {
+      "name": "2. Juhu Beach",
+      "location": "Juhu",
+      "rating": "4.7",
+      "type": "Great For Family Outing",
+      "cost": "₹2,102"
+    },
+    {
+      "name": "3. Marine Drive, Mumbai",
+      "location": "Churchgate",
+      "rating": "4.9",
+      "type": "Instagram Worthy",
+      "cost": "₹1,980"
+    },
+    {
+      "name": "4. Chhatrapati Shivaji Terminus",
+      "location": "South Mumbai",
+      "rating": "4.7",
+      "type": "Top Attraction",
+      "cost": "₹750"
+    },
+    {
+      "name": "5. Siddhivinayak Temple",
+      "location": "South Mumbai",
+      "rating": "4.6",
+      "type": "Popular among Locals",
+      "cost": "₹3,500"
+    },
+    {
+      "name": "6. Bandra Worli Sea Link",
+      "location": "South Mumbai",
+      "rating": "4.8",
+      "type": "Instagram Worthy",
+      "cost": "₹6,389"
+    },
+    {
+      "name": "7. Mumbai: Street Food and Night Markets Tour",
+      "location": "",
+      "rating": "4.9",
+      "type": "",
+      "cost": "₹1,560"
+    },
+    {
+      "name": "8. Elephanta Caves",
+      "location": "",
+      "rating": "4.5",
+      "type": "Great For Family Outing",
+      "cost": "₹1,400"
+    },
+    {
+      "name": "9. Haji Ali Dargah",
+      "location": "South Mumbai",
+      "rating": "4.4",
+      "type": "Top Attraction",
+      "cost": "₹450"
+    },
+    {
+      "name": "10. Sanjay Gandhi National Park",
+      "location": "Western Suburbs",
+      "rating": "4.5",
+      "type": "Fun For Kids",
+      "cost": "₹2,400"
+    },
+    {
+      "name": "11. Essel World",
+      "location": "Western Suburbs",
+      "rating": "4.1",
+      "type": "Fun For Kids",
+      "cost": ""
+    },
+    {
+      "name": "12. Girgaum Chowpatty",
+      "location": "South Mumbai",
+      "rating": "4.3",
+      "type": "Great For Family Outing",
+      "cost": "₹1,045"
+    },
+    {
+      "name": "13. Hanging Gardens",
+      "location": "South Mumbai",
+      "rating": "4.3",
+      "type": "Great For Couples",
+      "cost": "₹2,200"
+    },
+    {
+      "name": "14. Prince of Wales Museum",
+      "location": "Fort Mumbai",
+      "rating": "4.3",
+      "type": "Great For Family Outing",
+      "cost": ""
+    },
+    {
+      "name": "15. ISKCON Temple Mumbai",
+      "location": "Juhu",
+      "rating": "4.3",
+      "type": "Top Attraction",
+      "cost": ""
+    },
+    {
+      "name": "16. Crawford Market",
+      "location": "",
+      "rating": "4.2",
+      "type": "Top Attraction",
+      "cost": "₹1,980"
+    },
+    {
+      "name": "17. Mount Mary Church",
+      "location": "Bandra",
+      "rating": "4.3",
+      "type": "Popular among Locals",
+      "cost": "₹1,800"
+    },
+    {
+      "name": "18. Dabbawalas of Mumbai",
+      "location": "",
+      "rating": "4.1",
+      "type": "",
+      "cost": ""
+    },
+    {
+      "name": "19. Dharavi",
+      "location": "",
+      "rating": "3.9",
+      "type": "Popular among Locals",
+      "cost": ""
+    },
+    {
+      "name": "20. Colaba Causeway",
+      "location": "Colaba",
+      "rating": "4.3",
+      "type": "Top Attraction",
+      "cost": "₹1,450"
+    },
+    {
+      "name": "21. Film City Mumbai",
+      "location": "Western Suburbs",
+      "rating": "4.4",
+      "type": "Great For Family Outing",
+      "cost": "₹6,500"
+    },
+    {
+      "name": "22. Kanheri Caves",
+      "location": "Western Suburbs",
+      "rating": "4.4",
+      "type": "Hidden Gem",
+      "cost": "₹2,400"
+    },
+    {
+      "name": "23. Dhobi Ghat",
+      "location": "",
+      "rating": "4.6",
+      "type": "Popular among Locals",
+      "cost": ""
+    },
+    {
+      "name": "24. Worli Sea Face",
+      "location": "South Mumbai",
+      "rating": "4.3",
+      "type": "Top Attraction",
+      "cost": ""
+    },
+    {
+      "name": "25. Fashion Street, Mumbai",
+      "location": "Fort Mumbai",
+      "rating": "4.2",
+      "type": "Popular among Locals",
+      "cost": ""
+    },
+    {
+      "name": "26. Global Vipassana Pagoda",
+      "location": "",
+      "rating": "4.3",
+      "type": "Top Attraction",
+      "cost": "₹7,000"
+    },
+    {
+      "name": "27. Bandstand",
+      "location": "Bandra",
+      "rating": "4.4",
+      "type": "",
+      "cost": "₹1,800"
+    },
+    {
+      "name": "28. National Gallery of Modern Art, Mumbai",
+      "location": "Fort Mumbai",
+      "rating": "4.1",
+      "type": "Fun For Kids",
+      "cost": ""
+    },
+    {
+      "name": "29. Mumbai Zoo",
+      "location": "South Mumbai",
+      "rating": "3.9",
+      "type": "Fun For Kids",
+      "cost": ""
+    },
+    {
+      "name": "30. Mahalaxmi temple, Mumbai",
+      "location": "South Mumbai",
+      "rating": "4.2",
+      "type": "Popular among Locals",
+      "cost": ""
+    },
+    {
+      "name": "31. Enjoy Street Food",
+      "location": "",
+      "rating": "4.1",
+      "type": "Top Things To Do",
+      "cost": ""
+    },
+    {
+      "name": "32. Carter Road",
+      "location": "Bandra",
+      "rating": "4.0",
+      "type": "",
+      "cost": ""
+    },
+    {
+      "name": "33. Malabar Hill",
+      "location": "",
+      "rating": "3.9",
+      "type": "",
+      "cost": ""
+    },
+    {
+      "name": "34. Hill Road and Linking Road, Bandra",
+      "location": "Bandra",
+      "rating": "4.0",
+      "type": "",
+      "cost": ""
+    },
+    {
+      "name": "35. Haji Malang Dargah and Trek",
+      "location": "",
+      "rating": "4.3",
+      "type": "Top Things To Do",
+      "cost": ""
+    },
+    {
+      "name": "36. Versova Beach",
+      "location": "Andheri",
+      "rating": "3.8",
+      "type": "Great For Family Outing",
+      "cost": ""
+    },
+    {
+      "name": "37. National Museum of Indian Cinema",
+      "location": "Cumballa Hill",
+      "rating": "4.2",
+      "type": "Great For Family Outing",
+      "cost": ""
+    },
+    {
+      "name": "38. KidZania Mumbai",
+      "location": "",
+      "rating": "4.1",
+      "type": "Fun For Kids",
+      "cost": ""
+    },
+    {
+      "name": "39. Aksa Beach",
+      "location": "Western Suburbs",
+      "rating": "3.9",
+      "type": "",
+      "cost": ""
+    },
+    {
+      "name": "40. Gorakhgad Trek",
+      "location": "",
+      "rating": "3.6",
+      "type": "Top Things To Do",
+      "cost": ""
+    },
+    {
+      "name": "41. Kamala Nehru Park",
+      "location": "South Mumbai",
+      "rating": "4.0",
+      "type": "Great For Family Outing",
+      "cost": "₹1,980"
+    },
+    {
+      "name": "42. Water Sports in Mandwa Beach",
+      "location": "",
+      "rating": "4.3",
+      "type": "",
+      "cost": ""
+    },
+    {
+      "name": "43. Mahakali Caves",
+      "location": "Andheri",
+      "rating": "3.9",
+      "type": "Top Attraction",
+      "cost": ""
+    },
+    {
+      "name": "44. Phoenix MarketCity",
+      "location": "",
+      "rating": "",
+      "type": "",
+      "cost": ""
+    },
+    {
+      "name": "45. Lokhandwala Market",
+      "location": "Andheri",
+      "rating": "",
+      "type": "",
+      "cost": ""
+    },
+    {
+      "name": "46. Madh Island",
+      "location": "Western Suburbs",
+      "rating": "3.6",
+      "type": "",
+      "cost": ""
+    },
+    {
+      "name": "47. Makarandgad Trek",
+      "location": "",
+      "rating": "3.5",
+      "type": "",
+      "cost": ""
+    },
+    {
+      "name": "48. Gorai Beach",
+      "location": "Western Suburbs",
+      "rating": "",
+      "type": "",
+      "cost": ""
+    },
+    {
+      "name": "49. Adlabs Imagica",
+      "location": "",
+      "rating": "4.0",
+      "type": "Fun For Kids",
+      "cost": ""
+    },
+    {
+      "name": "50. Water Kingdom",
+      "location": "Western Suburbs",
+      "rating": "3.9",
+      "type": "Fun For Kids",
+      "cost": ""
+    },
+    {
+      "name": "51. Bhimashankar Trek",
+      "location": "",
+      "rating": "3.5",
+      "type": "",
+      "cost": ""
+    },
+    {
+      "name": "52. Jehangir Art Gallery",
+      "location": "Fort Mumbai",
+      "rating": "3.8",
+      "type": "",
+      "cost": "₹1,097"
+    }
+  ]
+}

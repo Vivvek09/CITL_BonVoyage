@@ -13,7 +13,7 @@ import EventDetailsPage from './EventDetailsPage.jsx';
 import GoogleEvents from './GoogleEvents.jsx';
 import EventRegistration from './EventLists/EventRegistration.jsx';
 import RegistrationConfirmation from './EventLists/RegistrationConfirmation.jsx';
-
+import StreamlitPage from './StreamlitPage.jsx';
 
 function App() {
   return (
@@ -34,6 +34,7 @@ function App() {
         <Route path="/single-event" element={<SingleEvent />} />
         <Route path="/events/:id/register" element={<EventRegistration />} />
         <Route path="/events/:id/confirmation" element={<RegistrationConfirmation />} />
+        <Route path="/streamlit" element={<StreamlitPage/>} />
       </Routes>
     </Router>
   );
