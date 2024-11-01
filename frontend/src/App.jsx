@@ -11,6 +11,8 @@ import CreateEventForm from './CreateEventForm.jsx';
 import EventActions from './components/EventActions/EventActions.jsx';
 import EventDetailsPage from './EventDetailsPage.jsx';
 import GoogleEvents from './GoogleEvents.jsx';
+import EventRegistration from './EventLists/EventRegistration.jsx';
+import RegistrationConfirmation from './EventLists/RegistrationConfirmation.jsx';
 
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
         <Route path="/eventactions" element={<EventActions />} />
         <Route path="/eventuser" element={<EventUser />} />
         <Route path="/single-event" element={<SingleEvent />} />
+        <Route path="/events/:id/register" element={<EventRegistration />} />
+        <Route path="/events/:id/confirmation" element={<RegistrationConfirmation />} />
       </Routes>
     </Router>
   );

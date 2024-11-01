@@ -55,6 +55,65 @@ const express = require('express');
 const router = express.Router();
 const Event = require('../models/Event');
 
+const UserEvent = require('../models/UserEvent');
+
+router.get('/:id/members', async (req, res) => {
+  try {
+    const members = await UserEvent.find({ event: req.params.id })
+      .select('name email phone joinedAt')
+      .sort({ joinedAt: -1 });
+    res.json(members);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching members", error: error.message });
+  }
+});
+
+// Register for an event
+router.post('/:id/register', async (req, res) => {
+  try {
+    const { name, email, phone} = req.body;
+    const eventId = req.params.id;
+
+    // Check if user is already registered
+    const existingRegistration = await UserEvent.findOne({
+      email: email,
+      event: eventId
+    });
+
+    if (existingRegistration) {
+      return res.status(400).json({ message: "Already registered for this event" });
+    }
+
+    // Get event details
+    const event = await Event.findById(eventId);
+    if (!event) {
+      return res.status(404).json({ message: "Event not found" });
+    }
+
+    // Create new registration
+    const userEvent = new UserEvent({
+      //user: mongoose.Types.ObjectId(userId), 
+      name,
+      email,
+      phone,
+      event: eventId,
+      eventTitle: event.title
+    });
+
+    const savedUserEvent = await userEvent.save();
+    res.status(201).json({ 
+      message: "Successfully registered for event",
+      userEvent: savedUserEvent 
+    });
+  } catch (error) {
+    console.error('Registration error:', error);
+    res.status(500).json({ 
+      message: "Error registering for event", 
+      error: error.message 
+    });
+  }
+});
+
 // Get all events
 router.get('/', async (req, res) => {
   try {
