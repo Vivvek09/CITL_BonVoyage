@@ -3,12 +3,13 @@
 
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useParams,useNavigate } from 'react-router-dom';
 import '../EventLists/EventDetails.css';
 import Navbar from '../components/Navbar';
 import { format, isValid } from 'date-fns';
 
 function EventPage() {
+  const navigate = useNavigate();
   const [event, setEvent] = useState(null);
   const { id } = useParams();
 
@@ -46,7 +47,7 @@ function EventPage() {
             <p><span className="icon">📍</span> {event.location}</p>
           </div>
           <div className="info-column">
-            <button className="join-group-button">Join Group</button>
+            <button className="join-group-button" onClick={() => navigate(`/events/${id}/register`)}>Join Group</button>
             <p className="price">Price: {event.ticketPrice ? `Rs ${event.ticketPrice}` : 'Free'}</p>
           </div>
         </div>
