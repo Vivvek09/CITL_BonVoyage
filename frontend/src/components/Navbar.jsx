@@ -52,7 +52,8 @@ const Navbar = () => {
         <li><Link to="/guide">Guide</Link></li>
         <li><Link to="/connect">Discover</Link></li>
         <li><Link to="/eventuser">eventuser</Link></li>
-      </ul>
+        <li><Link to="/streamlit">Recommandation</Link></li>
+</ul>
       {isLoggedIn ? (
         <div className="settings-dropdown">
           <button className="settings-btn" onClick={toggleDropdown}>
