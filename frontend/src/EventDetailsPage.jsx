@@ -199,13 +199,12 @@
 
 // export default EventDetailsPage;
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronLeft, Ticket, CircleDollarSign, Plus } from 'lucide-react';
 import './EventDetailsPage.css';
 import Navbar from './components/Navbar';
 import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
-import Home from './components/Home';
 
 const EventDetailsPage = () => {
   const location = useLocation();
@@ -279,7 +278,7 @@ const EventDetailsPage = () => {
             >
               <CircleDollarSign size={48} />
               <h3>Free Event</h3>
-              <p>I'm running a free event</p>
+              <p>I&apos;m running a free event</p>
             </button>
           </div>
           {ticketType === 'ticketed' && (
