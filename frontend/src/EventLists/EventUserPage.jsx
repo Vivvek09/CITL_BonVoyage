@@ -632,7 +632,7 @@ const EventUserPage = () => {
             
             // Create axios instance with base configuration
             axiosInstance = axios.create({
-              baseURL: 'https://citl-bonvoyage-backend-1td7.onrender.com',
+              baseURL: 'http://localhost:3000',
               withCredentials: true,
               headers: {
                 'Authorization': `Bearer ${token}`,
