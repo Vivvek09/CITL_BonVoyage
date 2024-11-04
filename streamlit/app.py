@@ -3,7 +3,6 @@ import pandas as pd
 import plotly.express as px
 import numpy as np
 
-df = pd.read_csv('streamlit/Mumbai_places.csv')
 
 # Set page configuration
 st.set_page_config(
@@ -71,7 +70,7 @@ st.markdown("""
 # Load and prepare data
 @st.cache_data
 def load_data():
-    df = pd.read_csv('streamlit/Mumbai_places.csv')
+    df = pd.read_csv('mumbai_places.csv')
     df['Rating'] = pd.to_numeric(df['Rating'], errors='coerce')
     df['Cost'] = df['Cost'].replace('₹', '', regex=True).replace(',', '', regex=True).apply(pd.to_numeric, errors='coerce')
     df['Name'] = df['Name'].replace(r'^\d+\.\s+', '', regex=True)
