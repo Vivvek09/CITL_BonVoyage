@@ -190,7 +190,7 @@ const GroupChat = ({ eventId, userId }) => {
   const { messages, setMessages } = useMessageContext();
 
   useEffect(() => {
-    const newSocket = io('https://citl-bonvoyage-backend-1td7.onrender.com', { withCredentials: true });
+    const newSocket = io('http://localhost:3000', { withCredentials: true });
     setSocket(newSocket);
 
     newSocket.on('connect', () => {
