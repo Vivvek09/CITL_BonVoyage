@@ -218,7 +218,7 @@ const EventDetailsPage = () => {
     const fetchEventData = async () => {
       if (location.state?.eventId) {
         try {
-          const response = await axios.get(`http://localhost:3000/api/events/${location.state.eventId}`);
+          const response = await axios.get(`https://citl-bonvoyage-backend-1td7.onrender.com/${location.state.eventId}`);
           setEventData(response.data);
         } catch (error) {
           console.error('Error fetching event data:', error);
@@ -240,7 +240,7 @@ const EventDetailsPage = () => {
         ticketName: ticketType === 'ticketed' ? ticketName : '',
         ticketPrice: ticketType === 'ticketed' ? parseFloat(ticketPrice) : 0,
       };
-      await axios.patch(`http://localhost:3000/api/events/${eventData._id}`, updatedEventData);
+      await axios.patch(`https://citl-bonvoyage-backend-1td7.onrender.com/api/events/${eventData._id}`, updatedEventData);
       navigate('/'); // Navigate to home page
     } catch (error) {
       console.error('Error publishing event:', error);
