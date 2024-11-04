@@ -22,7 +22,12 @@ const LoginSignup = () => {
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      const signupResponse = await axios.post("http://localhost:3000/api/signup", {
+      // const signupResponse = await axios.post("http://localhost:3000/api/signup", {
+      //   name,
+      //   email,
+      //   password,
+      // });
+      const signupResponse = await axios.post("https://citl-bonvoyage-backend-1td7.onrender.com/api/signup", {
         name,
         email,
         password,
@@ -30,7 +35,7 @@ const LoginSignup = () => {
       console.log(signupResponse.data);
 
       // Automatically log in the user after successful signup
-      const loginResponse = await axios.post("http://localhost:3000/api/login", {
+      const loginResponse = await axios.post("https://citl-bonvoyage-backend-1td7.onrender.com/api/login", {
         email,
         password,
       }, { withCredentials: true });
@@ -47,7 +52,7 @@ const LoginSignup = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/api/login", {
+      const response = await axios.post("https://citl-bonvoyage-backend-1td7.onrender.com/api/login", {
         email,
         password,
       }, { withCredentials: true });
