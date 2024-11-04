@@ -16,7 +16,7 @@ function EventPage() {
   useEffect(() => {
     const fetchEvent = async () => {
       try {
-        const res = await axios.get(`https://citl-bonvoyage-backend-1td7.onrender.com/api/events/${id}`);
+        const res = await axios.get(`http://localhost:3000/api/events/${id}`);
         setEvent(res.data);
       } catch (error) {
         console.error("Error fetching event data:", error);
