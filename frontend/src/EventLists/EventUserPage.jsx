@@ -597,6 +597,7 @@ import { Calendar, Clock, MapPin, Users, MessageCircle, Ticket } from 'lucide-re
 import axios from 'axios';
 import GroupChat from './GroupChat'
 import { MessageProvider } from './MessageContext';
+import Navbar from '../components/Navbar';
 
 const EventUserPage = () => {
     const [events, setEvents] = useState([]);
@@ -745,6 +746,7 @@ const fetchEventDetails = async (eventId) => { // Remove axiosInstance parameter
   // Rest of the component remains the same...
   return (
     <MessageProvider>
+      <Navbar />
     <div className="container mx-auto p-4">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {/* Events List */}
