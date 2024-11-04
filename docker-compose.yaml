@@ -1,0 +1,43 @@
+services:
+  backend:
+    build: 
+      context: ./backend
+    ports:
+      - "3000:3000" 
+    networks:
+      - citl
+    environment:
+      - MONGO_URI=mongodb+srv://venishakalola:KaD65RLvTAbm6IYh@cluster0.8uujn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      - NODE_ENV=development
+    depends_on:
+      - mongodb
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "5173:5173"
+    networks:
+      - citl
+    environment:
+      - VITE_API_URL=http://backend:3000
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    networks:
+      - citl
+    volumes:
+      - mongo-data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+
+networks:
+  citl:
+    driver: bridge
+
+volumes:
+  mongo-data:
+    driver: local
