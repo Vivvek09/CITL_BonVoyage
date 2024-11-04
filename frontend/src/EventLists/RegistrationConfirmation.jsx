@@ -413,17 +413,17 @@ const RegistrationConfirmation = () => {
       try {
         setLoading(true);
         // Fetch event details
-        const eventResponse = await axios.get(`http://localhost:3000/api/events/${id}`);
+        const eventResponse = await axios.get(`https://citl-bonvoyage-backend-1td7.onrender.com/api/events/${id}`);
         setEvent(eventResponse.data);
 
         // Fetch registered members
-        const membersResponse = await axios.get(`http://localhost:3000/api/events/${id}/members`);
+        const membersResponse = await axios.get(`https://citl-bonvoyage-backend-1td7.onrender.com/api/events/${id}/members`);
         setRegisteredMembers(membersResponse.data);
 
         // Get current user from localStorage or your auth system
         const userEmail = localStorage.getItem('userEmail');
         if (userEmail) {
-          const userResponse = await axios.get(`http://localhost:3000/api/users/current`);
+          const userResponse = await axios.get(`https://citl-bonvoyage-backend-1td7.onrender.com/api/users/current`);
           setCurrentUser(userResponse.data);
           
           // Check if current user is registered
