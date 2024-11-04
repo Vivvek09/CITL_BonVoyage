@@ -672,7 +672,7 @@ const CreateEventForm = () => {
     }
 
     try {
-      const response = await axios.post('https://citl-bonvoyage-backend-1td7.onrender.com/api/events', eventData);
+      const response = await axios.post('http://localhost:3000/api/events', eventData);
       navigate('/eventdetails', { state: { eventId: response.data._id } });
     } catch (error) {
       console.error('Error creating event:', error);
