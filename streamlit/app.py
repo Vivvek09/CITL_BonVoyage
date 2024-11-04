@@ -9,6 +9,7 @@ st.set_page_config(
     page_icon="🏖️",
     layout="wide"
 )
+df = pd.read_csv('mumbai_places.csv')
 
 # Custom CSS for better styling
 st.markdown("""
