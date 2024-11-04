@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get('https://citl-bonvoyage-backend-1td7.onrender.com/api/auth/user', { withCredentials: true });
+        const response = await axios.get('http://localhost:3000/api/auth/user', { withCredentials: true });
         setUser(response.data);
       } catch (error) {
         console.error('Error fetching user:', error);
