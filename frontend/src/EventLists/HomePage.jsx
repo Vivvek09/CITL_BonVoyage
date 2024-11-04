@@ -36,7 +36,7 @@ function HomePage() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await axios.get('https://citl-bonvoyage-backend-1td7.onrender.com/api/events');
+        const res = await axios.get('http://localhost:3000/api/events');
         setEvents(res.data);
       } catch (err) {
         console.error('Failed to fetch events:', err);
