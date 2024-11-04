@@ -3,7 +3,7 @@ import axios from "axios";
 export const refreshAccessToken = async () => {
   const refreshToken = localStorage.getItem("refreshToken");
   try {
-    const response = await axios.post("http://localhost:3000/api/refresh-token", { token: refreshToken });
+    const response = await axios.post("https://citl-bonvoyage-backend-1td7.onrender.com/api/refresh-token", { token: refreshToken });
     localStorage.setItem("accessToken", response.data.accessToken);
   } catch (error) {
     console.error("Error refreshing token:", error.response.data);
@@ -17,7 +17,7 @@ export const refreshAccessToken = async () => {
 export const apiCall = async () => {
   let accessToken = localStorage.getItem("accessToken");
   try {
-    const response = await axios.get("http://localhost:3000/api/protected", {
+    const response = await axios.get("https://citl-bonvoyage-backend-1td7.onrender.com/api/protected", {
       headers: { Authorization: `Bearer ${accessToken}` },
     });
     console.log(response.data);
