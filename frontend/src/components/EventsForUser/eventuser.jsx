@@ -19,7 +19,7 @@ function EventUser() {
       console.log('User ID:', userId);
 
       try {
-        const response = await axios.get(`https://citl-bonvoyage-backend-1td7.onrender.com/api/user-events/${userId}`, { withCredentials: true });
+        const response = await axios.get(`http://localhost:3000/api/user-events/${userId}`, { withCredentials: true });
         setEvents(response.data);
       } catch (error) {
         console.error('Error fetching events:', error);
