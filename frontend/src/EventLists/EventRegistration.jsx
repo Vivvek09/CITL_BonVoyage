@@ -467,10 +467,10 @@ const EventRegistration = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const eventRes = await axios.get(`http://localhost:3000/api/events/${id}`);
+        const eventRes = await axios.get(`https://citl-bonvoyage-backend-1td7.onrender.com/api/events/${id}`);
         setEvent(eventRes.data);
         
-        const membersRes = await axios.get(`http://localhost:3000/api/events/${id}/members`);
+        const membersRes = await axios.get(`https://citl-bonvoyage-backend-1td7.onrender.com/api/events/${id}/members`);
         setMembers(membersRes.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -484,7 +484,7 @@ const EventRegistration = () => {
     e.preventDefault();
     setError('');
     try {
-      const response = await axios.post(`http://localhost:3000/api/events/${id}/register`, formData);
+      const response = await axios.post(`https://citl-bonvoyage-backend-1td7.onrender.com/api/events/${id}/register`, formData);
       console.log('Registration successful:', response.data);
       
       // Store email in localStorage for confirmation page
