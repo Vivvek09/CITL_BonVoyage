@@ -70,7 +70,7 @@ st.markdown("""
 # Load and prepare data
 @st.cache_data
 def load_data():
-    df = pd.read_csv('mumbai_places.csv')
+    df = pd.read_csv('streamlit/mumbai_places.csv')
     df['Rating'] = pd.to_numeric(df['Rating'], errors='coerce')
     df['Cost'] = df['Cost'].replace('₹', '', regex=True).replace(',', '', regex=True).apply(pd.to_numeric, errors='coerce')
     df['Name'] = df['Name'].replace(r'^\d+\.\s+', '', regex=True)
